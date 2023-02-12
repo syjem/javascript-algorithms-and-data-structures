@@ -144,3 +144,18 @@ console.log(factorial(5));
       }
       
       console.log(titleCase("I'm a little tea pot"));
+
+
+
+
+    // Slice And Splice
+
+    function sliceAndSplice(arr1, arr2, n) {
+        let result = arr2.slice();
+        for (let i = 0; i < arr1.length; i++) {
+          result.splice(n, 0, arr1[i]);
+          n++;
+        }
+        return result;
+      } 
+      console.log(sliceAndSplice([2, 3, 4], [1, 5, 6], 1));
