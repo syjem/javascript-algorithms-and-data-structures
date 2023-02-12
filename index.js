@@ -116,3 +116,17 @@ console.log(factorial(5));
         return undefined;
       }
       console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
+
+
+
+    // Boo Who
+
+    function booWho(bool) {
+
+        if(bool === true | bool === false) {
+          return true;
+        }
+      
+        return false;
+      } 
+      console.log(booWho(null));
