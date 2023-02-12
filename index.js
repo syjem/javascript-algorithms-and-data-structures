@@ -89,3 +89,16 @@ console.log(factorial(5));
         return repeat;
       }
      console.log(repeatStringNumTimes("abc", 3));
+
+
+
+    //  Truncate a String
+
+    function truncateString(str, num) {
+
+        if(str.length <= num) {
+          return str;
+        }
+        return(str.substring(0, num) + "...");
+      } 
+      console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
