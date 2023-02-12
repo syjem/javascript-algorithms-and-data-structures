@@ -159,3 +159,14 @@ console.log(factorial(5));
         return result;
       } 
       console.log(sliceAndSplice([2, 3, 4], [1, 5, 6], 1));
+
+
+
+    // Falsy Bouncer
+  
+  function bouncer(arr) {
+    return arr.filter(function(value) {
+      return Boolean(value);
+    });
+    } 
+  console.log(bouncer([7, "ate", "", false, 9]));
