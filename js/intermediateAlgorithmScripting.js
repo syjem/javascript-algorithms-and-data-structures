@@ -42,3 +42,20 @@ function destroyer(arr) {
     return arr.filter(x => !args.includes(x));
   }
   console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+
+
+
+// Wherefore art thou
+
+function whatIsInAName(collection, source) {
+    // get an array of the keys in the source object
+    const keys = Object.keys(source);
+  
+    // filter the collection to include only objects that have matching name and value pairs
+    return collection.filter(obj =>
+      keys.every(key =>
+        obj.hasOwnProperty(key) && obj[key] === source[key]
+      )
+    );
+  }
+console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }));
