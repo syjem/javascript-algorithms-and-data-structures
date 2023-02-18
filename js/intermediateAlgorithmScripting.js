@@ -76,3 +76,36 @@ function spinalCase(str) {
     return str;
   }
 console.log(spinalCase('This Is Spinal Tap'));
+
+
+
+// Pig Latin
+
+function translatePigLatin(str) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    let newStr = str;
+    let consonantCluster = '';
+  
+    // Check if the first letter is a vowel
+    if (vowels.includes(str[0])) {
+      newStr += 'way';
+    } else {
+      // Find the first vowel and move the consonant cluster to the end of the word
+      for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+          newStr = str.slice(i) + consonantCluster + 'ay';
+          break;
+        } else {
+          consonantCluster += str[i];
+        }
+      }
+    }
+
+    if (consonantCluster === str) {
+        newStr += 'ay';
+      }
+  
+    return newStr;
+  }
+console.log(translatePigLatin("apple"));
+console.log(translatePigLatin("rhythm"));
