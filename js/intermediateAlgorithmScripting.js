@@ -58,4 +58,21 @@ function whatIsInAName(collection, source) {
       )
     );
   }
-console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }));
+console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, 
+{ first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], 
+{ last: "Capulet" }));
+
+
+
+// Spinal Tap Case
+
+function spinalCase(str) {
+    // Replace underscores and spaces with hyphens
+    str = str.replace(/[_\s]+/g, '-');
+    // Add a hyphen between a lowercase and uppercase letter
+    str = str.replace(/([a-z])([A-Z])/g, '$1-$2');
+    // Convert to lowercase
+    str = str.toLowerCase();
+    return str;
+  }
+console.log(spinalCase('This Is Spinal Tap'));
