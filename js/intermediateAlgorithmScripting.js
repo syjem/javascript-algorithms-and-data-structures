@@ -134,3 +134,24 @@ function DNA (str) {
 }
 
 console.log(DNA("TTGAG"));
+
+
+
+// Find the missing letter
+
+function fearNotLetter(str) {
+  for (let i = 0; i < str.length; i++) {
+    const currentCharCode = str.charCodeAt(i);
+    
+    // Check if the current character's ASCII code is not consecutive with the next character's ASCII code
+    if (i < str.length - 1 && str.charCodeAt(i + 1) - currentCharCode > 1) {
+      // If so, return the missing character as a string
+      return String.fromCharCode(currentCharCode + 1);
+    }
+  }
+  
+  // If no missing character is found, return undefined
+  return undefined;
+}
+
+console.log(fearNotLetter("abce"));
