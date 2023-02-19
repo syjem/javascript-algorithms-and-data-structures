@@ -109,3 +109,28 @@ function translatePigLatin(str) {
   }
 console.log(translatePigLatin("apple"));
 console.log(translatePigLatin("rhythm"));
+
+
+
+// DNA Pairing
+
+function DNA (str) {
+
+  // Define an object to map each base to its pairing element
+  const pairs = {
+    A: "T",
+    T: "A",
+    C: "G",
+    G: "C",
+  };
+
+  // Split the input string into an array of individual characters
+  const arr = str.split("");
+
+  // Use map to create a new array of 2-element arrays, where each element is a pair of bases
+  const arrPair = arr.map(char => [char, pairs[char]]);
+
+  return arrPair;
+}
+
+console.log(DNA("TTGAG"));
