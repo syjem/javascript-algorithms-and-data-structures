@@ -64,4 +64,15 @@ function rot13(str) {
     return decodedArray.join('');
   }
   
-  console.log(rot13("SERR PBQR PNZC");
+  console.log(rot13("SERR PBQR PNZC"));
+
+
+
+// Telephone Number Validator
+
+function telephoneCheck(str) {
+    let phoneCheck = /^(1\s?)?(\(\d{3}\)|\d{3})[-\s]?\d{3}[-\s]?\d{4}$/;
+   return phoneCheck.test(str);
+ }
+ 
+ console.log(telephoneCheck("555-555-5555"));
