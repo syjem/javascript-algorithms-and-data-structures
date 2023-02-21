@@ -43,4 +43,25 @@ function palindrome(str) {
     return romanNumeral;
   }
   
-  convertToRoman(36);
+  console.log(convertToRoman(36));
+
+
+// Caesars Cipher
+
+function rot13(str) {
+
+    function shiftLetter(letter) {  
+  
+      let code = letter.charCodeAt(0);  
+      if (code >= 65 && code <= 90) {  
+        code = code - 13 < 65 ? code + 13 : code - 13;
+      }  
+      return String.fromCharCode(code);
+    }
+    let decodedArray = str.split('').map(function(char) {  
+      return shiftLetter(char);
+    });
+    return decodedArray.join('');
+  }
+  
+  console.log(rot13("SERR PBQR PNZC");
